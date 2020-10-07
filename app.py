@@ -51,7 +51,7 @@ def welcome():
         f"The list of stations and names:<br/>"
         f"/api/v1.0/stations<br/>"
         f"<br/>"  
-        f"The list of temprture observations:<br/>"
+        f"The list of temprture observations with dates:<br/>"
         f"/api/v1.0/tobs<br/>"
         f"<br/>"  
         f"Temperatures for given start date: (USE 'yyyy-mm-dd' format):<br/>"
