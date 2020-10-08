@@ -78,7 +78,7 @@ def precipitation():
     
     return jsonify(last_year_data)
 
-# Return a JSON-list of stations from the dataset.
+# Stations route
 @app.route('/api/v1.0/stations/')
 def stations():
     session = Session(engine)
@@ -91,7 +91,7 @@ def stations():
 
 
 ##################################################################
-# Return a JSON-list of Temperature Observations from the dataset.
+# Temperature Observations route
 @app.route('/api/v1.0/tobs/')
 def tobs():
     session = Session(engine)
@@ -106,7 +106,7 @@ def tobs():
 
 
 ##################################################################
-# create start route
+# Start route
 @app.route("/api/v1.0/min_max_avg/<start>")
 def start(start):
     session = Session(engine)
@@ -133,6 +133,7 @@ def start(start):
     return jsonify(t_list)
 
 ##################################################################
+# Start and End route
 @app.route("/api/v1.0/min_max_avg/<start>/<end>")
 def start_end(start, end):
     session = Session(engine)
