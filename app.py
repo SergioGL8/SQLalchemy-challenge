@@ -97,8 +97,8 @@ def stations():
 def tobs():
     session = Session(engine)
     stations = session.query(Measurement.station,func.count(Measurement.station)).group_by(Measurement.station).order_by(func.count(Measurement.station).desc()).all()
-    most_active_station = stations[0][0]
-    station_data = session.query(Measurement.date, Measurement.tobs).filter(Measurement.station == most_active_station).all()
+    active_station = stations[0][0]
+    station_data = session.query(Measurement.date, Measurement.tobs).filter(Measurement.station == active_station).all()
     station_data = list(np.ravel(station_data))
 
     session.close()
