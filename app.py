@@ -78,6 +78,7 @@ def precipitation():
     
     return jsonify(last_year_data)
 
+##################################################################
 # Stations route
 @app.route('/api/v1.0/stations/')
 def stations():
